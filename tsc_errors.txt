@@ -1,0 +1,2 @@
+src/pages/Mangalsutras/MangalsutraPage.tsx(2,25): error TS2307: Cannot find module '../types' or its corresponding type declarations.
+src/utils/utils.ts(2,25): error TS2307: Cannot find module './types' or its corresponding type declarations.
