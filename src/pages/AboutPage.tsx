@@ -1,5 +1,6 @@
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
+import animiabout from '../assets/animi.png'
 
 export function AboutPage() {
   return (
@@ -8,12 +9,12 @@ export function AboutPage() {
       <main className="pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto">
           <h1 className="font-display text-[10vw] uppercase leading-none tracking-tighter mb-20 text-center md:text-left">About Us</h1>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center mt-10 lg:mt-20">
             <div className="aspect-square bg-black/5 rounded-3xl overflow-hidden order-2 lg:order-1">
-              <img 
-                src="https://api.dicebear.com/7.x/avataaars/svg?seed=Dhunya&mood[]=happy" 
-                alt="Dhunya" 
+              <img
+                src={animiabout}
+                alt="Dhunya"
                 className="w-full h-full object-cover p-10"
               />
             </div>
@@ -49,7 +50,7 @@ export function AboutPage() {
                 Our 9-level pathway provides clear milestones, from foundational reading to advanced literary criticism.
               </p>
             </div>
-            
+
             <div className="bg-black text-white p-10 lg:p-12 rounded-3xl">
               <h2 className="font-display text-4xl uppercase mb-8">Our Teaching Philosophy</h2>
               <ul className="space-y-6 text-lg">

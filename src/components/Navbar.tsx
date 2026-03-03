@@ -13,7 +13,7 @@ import {
   X
 } from "lucide-react";
 
-import logo from "../assets/logo3.png";
+import logo from "../assets/logo.png";
 
 export function Navbar() {
   const location = useLocation();
@@ -55,7 +55,7 @@ export function Navbar() {
         {/* Left: Logo */}
         <div className="flex items-center gap-2 sm:gap-4">
           <Link to="/" className="flex items-center">
-            <img src={logo} alt="Aurelia Luxe Logo" className="h-20 w-auto object-contain" />
+            <img src={logo} alt="Aurelia Luxe Logo" className="h-64 w-auto object-contain" />
           </Link>
         </div>
 
@@ -73,11 +73,11 @@ export function Navbar() {
 
         {/* Right: Theme Toggle & Book Demo */}
         <div className="flex items-center gap-3 sm:gap-4">
-          <button className="bg-black text-white px-4 py-2 lg:px-6 lg:py-2.5 rounded-full font-bold text-xs lg:text-sm flex items-center gap-2 shadow-lg shadow-black/20 whitespace-nowrap">
+          {/* <button className="bg-black text-white px-4 py-2 lg:px-6 lg:py-2.5 rounded-full font-bold text-xs lg:text-sm flex items-center gap-2 shadow-lg shadow-black/20 whitespace-nowrap">
             <span className="hidden sm:inline">Book Demo</span>
             <span className="sm:hidden">Demo</span>
             <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-          </button>
+          </button> */}
 
           <div
             onClick={toggleTheme}

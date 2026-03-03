@@ -3,27 +3,30 @@ import { motion, AnimatePresence } from 'motion/react';
 import { useInView } from 'react-intersection-observer';
 import { Star } from 'lucide-react';
 import { CrossMarker } from './CrossMarker';
+import animitestimonial from '../assets/animi_testimonial.png'
+import animitestimonial1 from '../assets/animi_testimonial1.png'
+import animitestimonial2 from '../assets/animi_testimonial2.png'
 
 const testimonials = [
   {
     id: 1,
     quote: "Best coaching I've experienced! Fast, professional, and the teaching style is incredible. Highly recommend!",
     author: "Felix",
-    image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Felix&mood[]=happy&style=transparent",
+    image: animitestimonial,
     bubble: "What my Students said"
   },
   {
     id: 2,
     quote: "The attention to detail and personalized feedback completely transformed my approach to design.",
     author: "Sarah",
-    image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah&mood[]=happy&style=transparent",
+    image: animitestimonial1,
     bubble: "Incredible Mentorship!"
   },
   {
     id: 3,
     quote: "I landed my dream job within weeks of completing the program. The portfolio review was a game-changer.",
     author: "Alex",
-    image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Alex&mood[]=happy&style=transparent",
+    image: animitestimonial2,
     bubble: "Got Hired Fast!"
   }
 ];

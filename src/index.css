@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600&display=swap');
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Anton", sans-serif;
+  --font-sans: "Montserrat", sans-serif;
+  --font-display: "Archivo Black", sans-serif;
   --color-accent: #00C2D1;
   --color-accent-dark: #00A8B5;
   --color-white: var(--color-bg);
@@ -15,10 +16,12 @@
     --color-bg: #ffffff;
     --color-text: #000000;
   }
+
   .dark {
     --color-bg: #121212;
     --color-text: #ffffff;
   }
+
   body {
     @apply bg-white text-black font-sans antialiased;
   }
@@ -61,8 +64,13 @@
 }
 
 @keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .animate-marquee {

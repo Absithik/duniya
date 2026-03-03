@@ -6,6 +6,10 @@ import { ValuePropBar } from "../components/ValuePropBar";
 import { TestimonialSection } from "../components/TestimonialSection";
 import { CrossMarker } from "../components/CrossMarker";
 import { useNavigate } from "react-router-dom";
+import animi from '../assets/animi.png'
+import animiabout from '../assets/animi_about.png'
+import animicontact from '../assets/animi_contact.png'
+
 
 export function HomePage() {
   const navigate = useNavigate();
@@ -40,7 +44,7 @@ export function HomePage() {
             </div>
 
             {/* Top Pill */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               className="bg-black/5 px-6 py-2 rounded-full text-sm font-medium text-black/80 mb-12"
@@ -50,40 +54,40 @@ export function HomePage() {
 
             {/* Massive Headline with Avatar */}
             <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 mb-8 w-full">
-              <motion.h1 
+              <motion.h1
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.1 }}
-                className="font-display text-[20vw] md:text-[12vw] uppercase leading-none tracking-tighter"
+                className="font-display text-[10vw] md:text-[10vw] uppercase leading-none tracking-tighter"
               >
                 HINDI
               </motion.h1>
 
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.2, type: "spring", stiffness: 200, damping: 20 }}
                 className="w-40 h-40 md:w-56 md:h-56 relative z-10 -my-8 md:my-0"
               >
-                <img 
-                  src="https://api.dicebear.com/7.x/avataaars/svg?seed=Teacher&mood[]=happy&style=transparent" 
-                  alt="Teacher Avatar" 
+                <img
+                  src={animi}
+                  alt="Teacher Avatar"
                   className="w-full h-full object-contain drop-shadow-2xl"
                 />
               </motion.div>
 
-              <motion.h1 
+              <motion.h1
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.3 }}
-                className="font-display text-[20vw] md:text-[12vw] uppercase leading-none tracking-tighter"
+                className="font-display text-[10vw] md:text-[10vw] uppercase leading-none tracking-tighter"
               >
                 COACHING
               </motion.h1>
             </div>
 
             {/* Subtitle */}
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
@@ -98,7 +102,7 @@ export function HomePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
             >
-              <button 
+              <button
                 onClick={() => navigate('/contact')}
                 className="bg-accent text-white px-10 py-5 rounded-full font-bold text-lg transition-all btn-glow flex items-center gap-3"
               >
@@ -121,7 +125,7 @@ export function HomePage() {
               <h2 className="font-display text-[12vw] md:text-[8vw] uppercase leading-none tracking-tighter">
                 COURSES
               </h2>
-              <button 
+              <button
                 onClick={() => navigate('/projects')}
                 className="bg-black text-white px-8 py-4 rounded-full font-bold text-sm transition-all hover:scale-105 flex items-center gap-3 shadow-2xl shadow-accent/20"
               >
@@ -135,7 +139,7 @@ export function HomePage() {
                 { title: "Intermediate", img: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?q=80&w=2670&auto=format&fit=crop" },
                 { title: "Degree Level", img: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=2670&auto=format&fit=crop" }
               ].map((course, idx) => (
-                <motion.div 
+                <motion.div
                   key={idx}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -144,9 +148,9 @@ export function HomePage() {
                   className="relative w-full aspect-[4/3] rounded-[2rem] overflow-hidden shadow-2xl shadow-black/10 group cursor-pointer"
                   onClick={() => navigate('/projects')}
                 >
-                  <img 
-                    src={course.img} 
-                    alt={course.title} 
+                  <img
+                    src={course.img}
+                    alt={course.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     referrerPolicy="no-referrer"
                   />
@@ -200,7 +204,7 @@ export function HomePage() {
 
                 <div className="p-8 border-b border-black/10 flex items-center gap-6 relative">
                   <div className="w-14 h-14 bg-black text-white rounded-2xl flex items-center justify-center shrink-0">
-                    <BookOpen size={24}/>
+                    <BookOpen size={24} />
                   </div>
                   <div>
                     <h5 className="font-bold text-lg">Foundation</h5>
@@ -212,7 +216,7 @@ export function HomePage() {
 
                 <div className="p-8 border-b border-black/10 flex items-center gap-6 relative">
                   <div className="w-14 h-14 bg-accent text-white rounded-2xl flex items-center justify-center shrink-0">
-                    <Target size={24}/>
+                    <Target size={24} />
                   </div>
                   <div>
                     <h5 className="font-bold text-lg">Intermediate</h5>
@@ -224,7 +228,7 @@ export function HomePage() {
 
                 <div className="p-8 flex items-center gap-6 relative">
                   <div className="w-14 h-14 bg-blue-600 text-white rounded-2xl flex items-center justify-center shrink-0">
-                    <Award size={24}/>
+                    <Award size={24} />
                   </div>
                   <div>
                     <h5 className="font-bold text-lg">Advanced</h5>
@@ -240,34 +244,34 @@ export function HomePage() {
                 <CrossMarker className="top-0 right-0 translate-x-1/2 -translate-y-1/2 hidden lg:block" />
 
                 <div className="h-[140px] border-b border-black/10 flex items-center justify-center relative shrink-0">
-                  <h2 className="font-display text-7xl md:text-8xl uppercase tracking-tighter">ABOUT US</h2>
+                  <h2 className="font-display text-7xl md:text-7xl uppercase tracking-tighter">ABOUT US</h2>
                   <CrossMarker className="bottom-0 right-0 translate-x-1/2 translate-y-1/2 hidden lg:block" />
                 </div>
 
                 <div className="flex-1 relative flex justify-center items-end p-10 min-h-[400px] lg:min-h-0 bg-white">
                   {/* Speech Bubble */}
-                  <motion.div 
+                  {/* <motion.div
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     className="absolute top-20 right-10 lg:right-4 bg-black/5 backdrop-blur-sm px-6 py-3 rounded-3xl rounded-bl-none font-bold text-sm border border-black/10 z-20"
                   >
                     Let Us Introduce <span className="text-accent">Ourselves</span>
-                  </motion.div>
+                  </motion.div> */}
 
                   {/* Avatar */}
                   <div className="relative w-full max-w-lg aspect-square">
-                    <img 
-                      src="https://api.dicebear.com/7.x/avataaars/svg?seed=Teacher2&mood[]=happy&style=transparent" 
-                      alt="Teacher" 
-                      className="w-full h-full object-contain relative z-10 drop-shadow-2xl" 
+                    <img
+                      src={animiabout}
+                      alt="Teacher"
+                      className="w-full h-full object-contain relative z-10 drop-shadow-2xl"
                     />
                     {/* Beanbag Shape */}
                     <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[120%] h-[60%] bg-accent/10 rounded-[100px] -z-0 border border-black/5 shadow-inner"></div>
                     {/* Laptop/Book prop */}
-                    <div className="absolute bottom-20 left-1/2 -translate-x-1/2 w-32 h-24 bg-gray-200 rounded-xl z-20 shadow-xl border border-white/50 flex items-center justify-center rotate-[-5deg]">
-                       <div className="w-8 h-8 bg-black/10 rounded-full"></div>
-                    </div>
+                    {/* <div className="absolute bottom-20 left-1/2 -translate-x-1/2 w-32 h-24 bg-gray-200 rounded-xl z-20 shadow-xl border border-white/50 flex items-center justify-center rotate-[-5deg]">
+                      <div className="w-8 h-8 bg-black/10 rounded-full"></div>
+                    </div> */}
                   </div>
                   <CrossMarker className="bottom-0 right-0 translate-x-1/2 translate-y-1/2 hidden lg:block" />
                 </div>
@@ -357,8 +361,8 @@ export function HomePage() {
                 { num: "03", title: "Advanced Course", badge: "Praveen Level Mastery" },
                 { num: "04", title: "Crash Course", badge: "Exam Revision & Mock Tests" }
               ].map((program, idx) => (
-                <div 
-                  key={idx} 
+                <div
+                  key={idx}
                   onClick={() => navigate('/projects')}
                   className="group flex flex-col md:flex-row items-start md:items-center justify-between p-8 md:p-12 border-b border-black/10 last:border-b-0 relative hover:bg-black/[0.02] transition-colors cursor-pointer"
                 >
@@ -377,7 +381,7 @@ export function HomePage() {
 
                   {/* Floating Element (only on the 3rd item for visual interest like the reference) */}
                   {idx === 2 && (
-                    <motion.div 
+                    <motion.div
                       initial={{ y: 0 }}
                       animate={{ y: [-10, 10, -10] }}
                       transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
@@ -406,21 +410,21 @@ export function HomePage() {
               <div className="flex flex-col border-b md:border-b-0 md:border-r border-black/10 relative items-center justify-center min-h-[500px] p-10">
                 <CrossMarker className="top-0 left-0 -translate-x-1/2 -translate-y-1/2" />
                 <CrossMarker className="top-0 right-0 translate-x-1/2 -translate-y-1/2" />
-                
-                <motion.div 
+
+                <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   className="absolute top-1/3 right-10 lg:right-20 bg-black/5 backdrop-blur-sm px-6 py-4 rounded-3xl rounded-tl-none font-bold text-sm border border-black/10 z-20 text-center"
                 >
-                  Frequently<br/>
-                  <span className="text-accent">Answered</span><br/>
+                  Frequently<br />
+                  <span className="text-accent">Answered</span><br />
                   Questions
                 </motion.div>
-                <img 
-                  src="https://api.dicebear.com/7.x/avataaars/svg?seed=Jack&mood[]=happy&style=transparent" 
-                  alt="FAQ Character" 
-                  className="w-64 h-64 object-contain relative z-10 drop-shadow-2xl" 
+                <img
+                  src={animi}
+                  alt="FAQ Character"
+                  className="w-64 h-64 object-contain relative z-10 drop-shadow-2xl"
                 />
               </div>
               {/* Right */}
@@ -459,8 +463,8 @@ export function HomePage() {
               <div className="flex flex-col border-b md:border-b-0 md:border-r border-black/10 relative items-center justify-center min-h-[500px] p-10">
                 <CrossMarker className="top-0 left-0 -translate-x-1/2 -translate-y-1/2" />
                 <CrossMarker className="top-0 right-0 translate-x-1/2 -translate-y-1/2" />
-                
-                <motion.div 
+
+                <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -468,10 +472,10 @@ export function HomePage() {
                 >
                   Contact <span className="text-accent">Us</span>
                 </motion.div>
-                <img 
-                  src="https://api.dicebear.com/7.x/avataaars/svg?seed=Teacher3&mood[]=happy&style=transparent" 
-                  alt="Contact Character" 
-                  className="w-64 h-64 object-contain relative z-10 drop-shadow-2xl" 
+                <img
+                  src={animicontact}
+                  alt="Contact Character"
+                  className="w-64 h-64 object-contain relative z-10 drop-shadow-2xl"
                 />
               </div>
               {/* Right */}
@@ -485,23 +489,23 @@ export function HomePage() {
                 <div className="flex-1 p-10 flex flex-col relative">
                   <h3 className="font-display text-4xl mb-4">Let's Work Together</h3>
                   <p className="text-black/60 mb-10 max-w-md">Have a question about our courses? Drop us a message and we'll get back to you within 24 hours.</p>
-                  
+
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-10">
-                     <div>
-                       <div className="flex items-center gap-2 font-bold mb-2"><Mail size={16}/> Email</div>
-                       <p className="text-black/60">hello@knowledgeduniya.com</p>
-                     </div>
-                     <div>
-                       <div className="flex items-center gap-2 font-bold mb-2"><Phone size={16}/> Phone</div>
-                       <p className="text-black/60">+91 98765 43210</p>
-                     </div>
+                    <div>
+                      <div className="flex items-center gap-2 font-bold mb-2"><Mail size={16} /> Email</div>
+                      <p className="text-black/60">hello@knowledgeduniya.com</p>
+                    </div>
+                    <div>
+                      <div className="flex items-center gap-2 font-bold mb-2"><Phone size={16} /> Phone</div>
+                      <p className="text-black/60">+91 98765 43210</p>
+                    </div>
                   </div>
 
                   <div className="mb-4 font-bold">Socials</div>
                   <div className="flex flex-wrap gap-3">
-                    <span className="bg-black/5 px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2 cursor-pointer hover:bg-black/10 transition-colors"><Instagram size={14}/> Instagram</span>
-                    <span className="bg-black/5 px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2 cursor-pointer hover:bg-black/10 transition-colors"><Facebook size={14}/> Facebook</span>
-                    <span className="bg-black/5 px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2 cursor-pointer hover:bg-black/10 transition-colors"><Youtube size={14}/> Youtube</span>
+                    <span className="bg-black/5 px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2 cursor-pointer hover:bg-black/10 transition-colors"><Instagram size={14} /> Instagram</span>
+                    <span className="bg-black/5 px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2 cursor-pointer hover:bg-black/10 transition-colors"><Facebook size={14} /> Facebook</span>
+                    <span className="bg-black/5 px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2 cursor-pointer hover:bg-black/10 transition-colors"><Youtube size={14} /> Youtube</span>
                   </div>
                 </div>
               </div>
